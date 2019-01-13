@@ -12,6 +12,6 @@ socket.on('disconnect', function() {
 socket.on('newEmail', function(email) {
     console.log('New email!', email);
 });
- socket.on('newMessage',(newMessage) => {
-    	console.log('newMessage', newMessage);
+socket.on('newMessage',(newMessage) => {
+    console.log('newMessage', newMessage);
 });
