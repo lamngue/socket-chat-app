@@ -12,11 +12,9 @@ socket.on('disconnect', function() {
 socket.on('newEmail', function(email) {
     console.log('New email!', email);
 });
-socket.on('newMessage',(newMessage) => {
-    console.log('newMessage', newMessage);
-    var li = $('<li></li>');
-    li.text(`${newMessage.from}: ${newMessage.text}`)
-    $('#messages').append(li);
+socket.on('newMessage',(message) => {
+    console.log('newMessage', message);
+    $("#messages").append(`<li>from ${message.from}: ${message.text}</li>`);
 });
 
 
